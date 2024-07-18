@@ -1,11 +1,12 @@
 from fastapi import FastAPI
+from sqlmodel import SQLModel
+from src.main.routes import books
+from src.database.connect import engine
 
-
-from src.main.routes import users
-# Load env here if needed using config if defined
 app = FastAPI()
 
-app.include_router(users.users_router)
+@app.on_event("startup")
+def on_startup():
+    SQLModel.metadata.create_all(engine)
 
-
-# General middleware for the application
+app.include_router(books.router, prefix="/api")
