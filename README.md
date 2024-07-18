@@ -8,6 +8,7 @@ The guides on [fastapi](https://fastapi.tiangolo.com/learn/), [SQLmodel ORM](htt
 
 The project structure is as follows:
 
+```text
 └── Project Directory
     ├── Virtual Environment(if you have to use one)
     └── Project
@@ -41,6 +42,7 @@ The project structure is as follows:
             │   └── README.md
             └── utilities
                 └── README.md
+```
 
 ## Usage
 
