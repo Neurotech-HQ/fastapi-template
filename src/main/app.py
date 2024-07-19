@@ -9,4 +9,4 @@ app = FastAPI()
 def on_startup():
     SQLModel.metadata.create_all(engine)
 
-app.include_router(books.router, prefix="/api")
+app.include_router(books.router, prefix="/api/books")
